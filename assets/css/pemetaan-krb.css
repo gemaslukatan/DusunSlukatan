@@ -1,0 +1,160 @@
+/* ==========================================================================
+   CSS Khusus Halaman Pemetaan KRB (Updated Full Screen, Wider Map & Responsive)
+   ========================================================================== */
+
+.hero-section-krb {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Membuat gambar memenuhi seluruh tinggi layar */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Teks berada di tengah secara vertikal */
+    color: white;
+    text-align: left;
+    overflow: hidden;
+}
+
+.hero-section-krb .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 2; /* Memastikan teks berada di atas lapisan background */
+}
+
+.hero-section-krb h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section-krb p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 850px;
+    font-family: sans-serif;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Container khusus untuk meletakkan gelombang di dasar hero section */
+.wave-divider {
+    position: absolute;
+    bottom: -1px; /* Menghilangkan celah garis putih tipis di bawah */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px; /* Tinggi lengkungan gelombang */
+    transform: rotate(180deg); /* Membalik arah gelombang agar melengkung ke atas */
+}
+
+/* Mengubah warna isian gelombang SVG agar pas dengan background krem konten bawah */
+.wave-divider .shape-fill {
+    fill: #FAF0E6;
+}
+
+/* ==========================================================================
+   BAGIAN PETA (DIBUAT LEBIH LEBAR & RESPONSIF)
+   ========================================================================== */
+
+.map-section-krb {
+    background-color: #FAF0E6;
+    padding: 60px 0; /* Padding atas bawah disesuaikan */
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden; /* Mencegah overflow horizontal pada section utama */
+}
+
+.map-section-krb .container {
+    max-width: 95%; /* Mengubah dari 1100px ke 95% agar memanfaatkan lebar layar monitor */
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.map-section-krb h2 {
+    color: #D2B48C;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+/* Wadah luar Peta */
+.map-container-wrap {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+    height: 75vh; /* Menggunakan viewport height agar tinggi peta proporsional di desktop lebar */
+    min-height: 500px; /* Batas tinggi minimal */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Menyembunyikan scrollbar bawaan container */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Memastikan iframe bersih dan responsif */
+.map-container-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Untuk HP / Mobile Device)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-section-krb h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section-krb p {
+        font-size: 1rem;
+    }
+
+    .hero-section-krb .container {
+        padding: 0 20px;
+    }
+
+    .map-section-krb {
+        padding: 40px 0;
+    }
+
+    .map-section-krb .container {
+        max-width: 100%; /* Full di layar HP */
+        padding: 0 10px;
+    }
+
+    .map-section-krb h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .map-container-wrap {
+        height: 450px; /* Tinggi disesuaikan untuk layar HP agar tidak terlalu panjang ke bawah */
+        min-height: auto;
+        border-radius: 10px;
+        padding: 5px;
+        overflow-x: auto; /* Mengizinkan scroll halus khusus pada peta jika konten PDF di dalamnya kaku */
+        -webkit-overflow-scrolling: touch; /* Scroll smooth untuk iOS */
+    }
+}

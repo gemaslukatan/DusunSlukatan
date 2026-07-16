@@ -1,0 +1,385 @@
+/* ==========================================
+            GLOBAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fdf8ea;
+    color:#222;
+}
+
+/* ==========================================
+            HERO
+========================================== */
+
+.about-hero{
+
+    padding:140px 8% 80px;
+
+    background:#fdf8ea;
+
+}
+
+.about-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ================= LEFT ================= */
+
+.about-left{
+
+    flex:1;
+
+    min-width:350px;
+
+}
+
+.sub-title{
+
+    display:inline-block;
+
+    color:#f0a500;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.about-left h1{
+
+    font-size:60px;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.about-left p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+/* ================= INFO ================= */
+
+.about-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.info-box{
+
+    border-left:4px solid #f0a500;
+
+    padding-left:18px;
+
+}
+
+.info-box h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+.info-box span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/* ================= RIGHT ================= */
+
+.about-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.about-right img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:25px;
+
+    border:8px solid #efc27a;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.about-right img:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ==========================================
+        PROGRAM KERJA
+========================================== */
+
+.program{
+
+    padding:80px 8% 120px;
+
+    background:#fdf8ea;
+
+}
+
+.section-header{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-header span{
+
+    color:#f0a500;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+.section-header h2{
+
+    margin-top:15px;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+        GRID
+========================================== */
+
+.program-grid{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* ==========================================
+        CARD
+========================================== */
+
+.program-card{
+
+    background:white;
+
+    border:1px solid #e5d7ba;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.program-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.program-card span{
+
+    color:#f0a500;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+.program-card h3{
+
+    margin:18px 0;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.program-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+        RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.about-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.about-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.info-box{
+
+    border-left:none;
+
+    border-top:4px solid #f0a500;
+
+    padding-top:15px;
+
+    padding-left:0;
+
+}
+
+.program-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-left h1{
+
+    font-size:42px;
+
+}
+
+.section-header h2{
+
+    font-size:38px;
+
+}
+
+.program-card h3{
+
+    font-size:28px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.about-left h1{
+
+    font-size:34px;
+
+}
+
+.about-left p{
+
+    font-size:16px;
+
+}
+
+.section-header h2{
+
+    font-size:30px;
+
+}
+
+.program-card{
+
+    padding:25px;
+
+}
+
+}

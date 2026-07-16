@@ -1,0 +1,160 @@
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(190,190,190,.28);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.35);
+
+    z-index: 999;
+
+    transition: .4s ease;
+
+}
+
+/* ========================= */
+
+.navbar .container{
+
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+
+}
+
+/* ========================= */
+
+.navbar-nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 80px;
+
+}
+
+/* ========================= */
+
+.nav-item{
+
+    list-style: none;
+
+}
+
+/* ========================= */
+
+.nav-link{
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    letter-spacing: .3px;
+
+    transition: .3s;
+
+    position: relative;
+
+}
+
+/* Garis bawah */
+
+.nav-link::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #ffee00;
+
+    transform: translateX(-50%);
+
+    transition: .3s;
+
+}
+
+.nav-link:hover{
+
+    color: #ffee00 !important;
+
+}
+
+.nav-link:hover::after{
+
+    width: 100%;
+
+}
+
+/* Menu aktif */
+
+.nav-link.active{
+
+    color: #ffee00 !important;
+
+}
+
+.nav-link.active::after{
+
+    width: 100%;
+
+}
+
+/* ========================= */
+/* HAMBURGER */
+/* ========================= */
+
+.navbar-toggler{
+
+    border: none;
+
+    outline: none;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow: none;
+
+}
+
+/* ========================= */
+/* SAAT DISCROLL */
+/* ========================= */
+
+.navbar.scrolled{
+
+    background: rgba(30,30,30,.85);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+}
