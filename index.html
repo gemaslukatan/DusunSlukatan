@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Desa Slukatan</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- Menambahkan class 'active' secara manual karena ini halaman home -->
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">Profil Desa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pemetaan-mat.html">Pemetaan MAT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pemetaan-krb.html">Pemetaan KRB</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <h1>Selamat Datang di Desa Slukatan</h1>
+            <p>
+                Desa wisata di lereng Gunung Bismo, Kecamatan Mojotengah,
+                Kabupaten Wonosobo, Jawa Tengah.
+                Nikmati pesona alam pegunungan, budaya lokal,
+                dan berbagai potensi desa.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= MENU CEPAT ================= -->
+    <section class="quick-menu">
+        <div class="menu-container">
+            <!-- MAT -->
+            <a href="pemetaan-mat.html" class="menu-card">
+                <div class="icon-box">
+                    <img src="assets/icon/peta.png" alt="MAT">
+                </div>
+                <h3>Muka Air Tanah</h3>
+            </a>
+
+            <!-- PROFIL -->
+            <a href="profil.html" class="menu-card">
+                <div class="icon-box">
+                    <img src="assets/icon/profil.png" alt="Profil">
+                </div>
+                <h3>Profil Desa</h3>
+            </a>
+
+            <!-- KRB -->
+            <a href="pemetaan-krb.html" class="menu-card">
+                <div class="icon-box">
+                    <img src="assets/icon/peta.png" alt="KRB">
+                </div>
+                <h3>Kawasan Rawan Bencana</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= POTENSI DESA ================= -->
+    <section class="potensi" id="potensi">
+        <div class="container">
+            <div class="section-title">
+                <h2>POTENSI DESA</h2>
+                <p>
+                    Temukan berbagai potensi unggulan Desa Slukatan yang menjadi daya tarik sekaligus
+                    sumber pengembangan ekonomi, pariwisata, dan kehidupan masyarakat.
+                </p>
+            </div>
+
+            <div class="potensi-wrapper">
+                <!-- CARD 1 -->
+                <div class="potensi-card">
+                    <div class="potensi-image">
+                        <img src="assets/img/sungaiMudal.jpeg" alt="Sungai Mudal">
+                    </div>
+                    <div class="potensi-content">
+                        <h3>Sungai Mudal</h3>
+                        <p>
+                            <a href="https://maps.app.goo.gl/9FUaUfdLYMELs5wk8" target="_blank" style="color: black; text-decoration: none;">
+                                <i class="fa-solid fa-location-dot"></i> Dusun Slukatan, Kec. Mojotengah
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="potensi-card">
+                    <div class="potensi-image">
+                        <img src="assets/img/jembatan.jpeg" alt="Jembatan">
+                    </div>
+                    <div class="potensi-content">
+                        <h3>Jembatan Hängebrücke</h3>
+                        <p>
+                            <a href="https://maps.app.goo.gl/SpD9vVay1JwHwFEi6" target="_blank" style="color: black; text-decoration: none;">
+                                <i class="fa-solid fa-location-dot"></i> Dusun Slukatan, Kec. Mojotengah
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="potensi-card">
+                    <div class="potensi-image">
+                        <img src="assets/img/traking.jpeg" alt="Tracking">
+                    </div>
+                    <div class="potensi-content">
+                        <h3>Tracking Gunung Bismo</h3>
+                        <p>
+                            <a href="https://maps.app.goo.gl/m81eEWnUda3TgtUe6" target="_blank" style="color: black; text-decoration: none;">
+                                <i class="fa-solid fa-location-dot"></i> Dusun Slukatan, Kec. Mojotengah
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-center">
+                <a href="profil.html" class="btn-view">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-menu">
+                <!-- Mengubah absolute path /KKN/ menjadi relative path agar aman di hosting -->
+                <a href="profil.html">Profil Desa</a>
+                <a href="pemetaan-mat.html">Pemetaan MAT</a>
+                <a href="pemetaan-krb.html">Pemetaan KRB</a>
+                <a href="about.html">About Us</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/gema_slukatan?igsh=MTFreDU4djh2c2pqaA%3D%3D&utm_source=qr" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCSCnDuBpf0LPVZ2UuKND70A" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <div class="footer-copy">
+                © 2026 KKN Bela Negara 84.390 UPN "Veteran" Yogyakarta
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
