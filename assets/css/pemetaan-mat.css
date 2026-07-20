@@ -1,0 +1,168 @@
+/* --- Global Style --- */
+body {
+    background-color: #fbf7e8 !important; /* Memaksa warna background krem pucat */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Hero Section MAT (Di-tuning agar gambar tidak tanggung) --- */
+.hero-section-mat {
+    background-size: cover;
+    background-position: center 25%; /* Menggeser fokus gambar agak ke atas supaya gunungnya terlihat utuh */
+    background-repeat: no-repeat;
+    min-height: 85vh; /* Menambah sedikit tinggi layar agar pas memperlihatkan lekukan gunung */
+    padding: 160px 0 160px 0; /* Menyeimbangkan padding atas dan bawah */
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Memperbaiki tulisan menjadi rata kiri dan agak berjarak dari kiri */
+.hero-section-mat .container {
+    text-align: left !important;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section-mat h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-section-mat p {
+    font-size: 1rem;
+    max-width: 750px; /* Batasi lebar teks agar tidak terlalu panjang ke kanan */
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Memperbaiki Gelombang Pembatas Wave SVG */
+.hero-section-mat .wave-divider {
+    position: absolute;
+    bottom: -1px; /* Mencegah garis putih bocor */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* Memutar balik posisi gelombang agar pas */
+}
+
+.hero-section-mat .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.hero-section-mat .wave-divider .shape-fill {
+    fill: #fbf7e8 !important; /* Menutup dengan warna krem latar belakang */
+}
+
+/* --- Map Section --- */
+.map-section-mat {
+    padding: 60px 0 30px 0;
+    text-align: center;
+}
+
+.map-section-mat h2 {
+    color: #f39c12;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.placeholder-map {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    border: 3px dashed #ebdcb2 !important;
+    background-color: #fffaf0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+/* --- Section Bahaya Penggalian (Memperbaiki Card yang Hilang) --- */
+.bahaya-penggalian {
+    padding: 60px 0 80px 0;
+}
+
+.bahaya-penggalian h2 {
+    color: #f39c12;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Membuat grid system untuk card */
+.bahaya-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 30px !important;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Memaksa box/card warna hijau stabilo-lembutnya muncul kembali */
+.bahaya-card {
+    background-color: #e6f975 !important; 
+    padding: 35px 25px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.04) !important;
+    text-align: center !important;
+    display: block !important; /* Memastikan bukan bertingkah seperti text biasa */
+}
+
+.bahaya-card h3 {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #111 !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+}
+
+.bahaya-card p {
+    font-size: 0.9rem !important;
+    color: #333 !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+}
+
+/* ===================================================
+   RESPONSIF SMARTPHONE 📱
+=================================================== */
+@media (max-width: 992px) {
+    .bahaya-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section-mat {
+        min-height: auto;
+        padding: 120px 15px 80px 15px;
+    }
+    .hero-section-mat .container {
+        text-align: left !important;
+    }
+    .hero-section-mat h1 {
+        font-size: 2rem;
+    }
+    .hero-section-mat .wave-divider svg {
+        height: 40px;
+    }
+    .placeholder-map {
+        height: 300px;
+    }
+    .bahaya-grid {
+        grid-template-columns: 1fr !important; /* Menjadi satu baris kebawah di HP */
+        gap: 20px !important;
+    }
+}
