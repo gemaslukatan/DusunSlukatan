@@ -53,19 +53,22 @@
         </div>
     </nav>
 
-    <!-- ================= HERO SECTION DENGAN GELOMBANG (Persis KRB) ================= -->
+    <!-- ================= HERO SECTION DENGAN GELOMBANG ================= -->
     <div class="hero-section-mat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)), url('assets/img/home.jpg');">
         <div class="container hero-text-left">
-            <h1>Pemetaan Muka Air Tanah</h1>
+            <h1>Pemetaan Aliran Mata Air</h1>
             <p>
-                Pemetaan Muka Air Tanah (MAT) adalah proses pemetaan yang menunjukkan kedalaman dan kondisi muka air tanah di suatu wilayah. Muka air tanah merupakan batas atas di lapisan tanah yang jenuh air. Informasi ini diperoleh melalui pengukuran posisi sumur, mata air, atau survei hidrogeologi.
+                Pemetaan Aliran Mata Air (PAA) adalah proses pemetaan yang menunjukkan jalur dan karakteristik aliran air dari mata air
+                 di suatu wilayah. Informasi ini diperoleh melalui pengukuran posisi mata air, survei hidrogeologi, dan analisis topografi.
             </p>
             <p>
-                Pemetaan MAT bertujuan untuk mengetahui kondisi ketersediaan air tanah sehingga dapat dimanfaatkan sebagai dasar dalam pengelolaan sumber daya air, perencanaan pembangunan, penentuan lokasi sumur, serta upaya mitigasi terhadap potensi kekeringan.
+                Pemetaan PAA bertujuan untuk mengetahui kondisi ketersediaan dan distribusi air permukaan sehingga dapat
+                 dimanfaatkan sebagai dasar dalam pengelolaan sumber daya air, perencanaan pembangunan, penentuan lokasi sumur,
+                  serta upaya mitigasi terhadap potensi kekeringan.
             </p>
         </div>
 
-        <!-- Vektor SVG Gelombang Pembatas di Bawah Hero (Arah Normal Mengunci Dasar Area Krem) -->
+        <!-- Vektor SVG Gelombang Pembatas -->
         <div class="wave-divider">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z" class="shape-fill"></path>
@@ -73,24 +76,27 @@
         </div>
     </div>
 
-    <!-- ================= SECTION PETA (Dikosongkan Sementara) ================= -->
+    <!-- ================= SECTION PETA ================= -->
     <div class="map-section-mat">
         <div class="container">
             <h2>PETA MUKA AIR TANAH</h2>
             
-            <!-- Area Ditandai Kotak Kosong Bermotif Garis Putus-Putus -->
-            <div class="map-container-wrap placeholder-map">
-                <div class="map-placeholder-content">
-                    <i class="fa-regular fa-map fa-3x mb-3" style="color: #f39c12;"></i>
-                    <p class="fw-medium text-muted m-0">Area Peta MAT Belum Dimasukkan</p>
-                    <span class="text-secondary small">Jika berkas peta-pdf.html sudah siap, ganti div pembungkus ini menggunakan tag iframe</span>
-                </div>
+            <!-- Area Wadah Peta -->
+            <div class="map-container-wrap">
+                <img src="assets/img/PAA.jpg" alt="Peta Muka Air Tanah" class="peta-img">
+            </div>
+
+            <!-- Tombol Opsi untuk membuka gambar full di tab baru -->
+            <div class="text-center mt-3">
+                <a href="assets/img/PAA.jpg" target="_blank" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center me-1"></i> Buka Peta Ukuran Penuh
+                </a>
             </div>
             
         </div>
     </div>
 
-    <!-- ================= SECTION BAHAYA PENGGALIAN (Grid Box Hijau Stabilo Muncul) ================= -->
+    <!-- ================= SECTION BAHAYA PENGGALIAN ================= -->
     <section class="bahaya-penggalian">
         <div class="container">
             <h2>BAHAYA PENGGALIAN BEBAS</h2>
@@ -101,7 +107,7 @@
                 </div>
                 <div class="bahaya-card">
                     <h3>Mengurangi Debit Mata Air</h3>
-                    <p>Pengambilan air tanah secara berlebihan dapat microfiber mengurangi debit mata air alami yang menjadi sumber air bagi masyarakat.</p>
+                    <p>Pengambilan air tanah secara berlebihan dapat mengurangi debit mata air alami yang menjadi sumber air bagi masyarakat.</p>
                 </div>
                 <div class="bahaya-card">
                     <h3>Meningkatkan Risiko Tanah Longsor</h3>
@@ -128,7 +134,7 @@
         <div class="footer-container">
             <div class="footer-menu">
                 <a href="profil.html">Profil Desa</a>
-                <a href="pemetaan-mat.html">Pemetaan MAT</a>
+                <a href="pemetaan-mat.html">Pemetaan PAA</a>
                 <a href="pemetaan-krb.html">Pemetaan KRB</a>
                 <a href="about.html">About Us</a>
             </div>

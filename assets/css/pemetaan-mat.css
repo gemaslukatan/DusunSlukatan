@@ -1,23 +1,26 @@
+/* ==========================================================================
+   CSS HALAMAN PEMETAAN MAT (MUKA AIR TANAH) - CLEAN & RESPONSIVE VERSION
+   ========================================================================== */
+
 /* --- Global Style --- */
 body {
-    background-color: #fbf7e8 !important; /* Memaksa warna background krem pucat */
+    background-color: #fbf7e8 !important; /* Warna dasar krem pucat */
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- Hero Section MAT (Di-tuning agar gambar tidak tanggung) --- */
+/* --- Hero Section MAT --- */
 .hero-section-mat {
     background-size: cover;
-    background-position: center 25%; /* Menggeser fokus gambar agak ke atas supaya gunungnya terlihat utuh */
+    background-position: center 25%;
     background-repeat: no-repeat;
-    min-height: 85vh; /* Menambah sedikit tinggi layar agar pas memperlihatkan lekukan gunung */
-    padding: 160px 0 160px 0; /* Menyeimbangkan padding atas dan bawah */
-    color: #fff;
+    min-height: 85vh;
+    padding: 160px 0 140px 0;
+    color: #ffffff;
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Memperbaiki tulisan menjadi rata kiri dan agak berjarak dari kiri */
 .hero-section-mat .container {
     text-align: left !important;
     max-width: 1140px;
@@ -29,24 +32,27 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 25px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-section-mat p {
     font-size: 1rem;
-    max-width: 750px; /* Batasi lebar teks agar tidak terlalu panjang ke kanan */
+    max-width: 750px;
     margin-bottom: 20px;
     line-height: 1.7;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Memperbaiki Gelombang Pembatas Wave SVG */
+/* Gelombang Pembatas Hero (Wave SVG) */
 .hero-section-mat .wave-divider {
     position: absolute;
-    bottom: -1px; /* Mencegah garis putih bocor */
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg); /* Memutar balik posisi gelombang agar pas */
+    transform: rotate(180deg);
+    z-index: 2;
 }
 
 .hero-section-mat .wave-divider svg {
@@ -57,13 +63,14 @@ body {
 }
 
 .hero-section-mat .wave-divider .shape-fill {
-    fill: #fbf7e8 !important; /* Menutup dengan warna krem latar belakang */
+    fill: #fbf7e8 !important;
 }
 
-/* --- Map Section --- */
+/* --- Section Peta --- */
 .map-section-mat {
-    padding: 60px 0 30px 0;
+    padding: 50px 0 40px 0;
     text-align: center;
+    width: 100%;
 }
 
 .map-section-mat h2 {
@@ -71,24 +78,44 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
     font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-.placeholder-map {
+/* Wadah Utama Peta (Frame Kartu White) */
+.map-container-wrap {
     width: 100%;
-    max-width: 900px;
-    height: 500px;
+    max-width: 1100px;
     margin: 0 auto;
-    border: 3px dashed #ebdcb2 !important;
-    background-color: #fffaf0 !important;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 12px;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Mencegah konten meluap */
 }
 
-/* --- Section Bahaya Penggalian (Memperbaiki Card yang Hilang) --- */
+/* Kunci Pengaturan Ukuran Gambar & Iframe Peta */
+.map-container-wrap img,
+.map-container-wrap iframe,
+.peta-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 70vh !important; /* Batas tinggi maksimal di Desktop */
+    object-fit: contain !important; /* Skala peta mengecil otomatis secara proporsional */
+    display: block !important;
+    margin: 0 auto !important;
+    border: none;
+    border-radius: 8px;
+}
+
+/* --- Section Bahaya Penggalian --- */
 .bahaya-penggalian {
-    padding: 60px 0 80px 0;
+    padding: 50px 0 80px 0;
 }
 
 .bahaya-penggalian h2 {
@@ -99,70 +126,95 @@ body {
     text-align: center;
 }
 
-/* Membuat grid system untuk card */
+/* Layout Grid Kartu */
 .bahaya-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; 
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 30px !important;
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Memaksa box/card warna hijau stabilo-lembutnya muncul kembali */
 .bahaya-card {
-    background-color: #e6f975 !important; 
-    padding: 35px 25px !important;
-    border-radius: 20px !important;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.04) !important;
+    background-color: #e6f975 !important;
+    padding: 30px 22px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04) !important;
     text-align: center !important;
-    display: block !important; /* Memastikan bukan bertingkah seperti text biasa */
+    display: block !important;
+    transition: transform 0.2s ease;
+}
+
+.bahaya-card:hover {
+    transform: translateY(-4px);
 }
 
 .bahaya-card h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.15rem !important;
     font-weight: 600 !important;
-    color: #111 !important;
-    margin-bottom: 15px !important;
+    color: #111111 !important;
+    margin-bottom: 12px !important;
     text-align: center !important;
 }
 
 .bahaya-card p {
     font-size: 0.9rem !important;
-    color: #333 !important;
+    color: #333333 !important;
     line-height: 1.6 !important;
     text-align: center !important;
     margin-bottom: 0 !important;
 }
 
-/* ===================================================
-   RESPONSIF SMARTPHONE 📱
-=================================================== */
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIF TABLET & HP)
+   ========================================================================== */
+
+/* Tablet & iPad */
 @media (max-width: 992px) {
     .bahaya-grid {
         grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
     }
 }
 
-@media (max-width: 576px) {
+/* Smartphone / HP */
+@media (max-width: 768px) {
     .hero-section-mat {
         min-height: auto;
-        padding: 120px 15px 80px 15px;
+        padding: 120px 15px 70px 15px;
     }
-    .hero-section-mat .container {
-        text-align: left !important;
-    }
+
     .hero-section-mat h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
+
+    .hero-section-mat p {
+        font-size: 0.95rem;
+    }
+
     .hero-section-mat .wave-divider svg {
         height: 40px;
     }
-    .placeholder-map {
-        height: 300px;
+
+    .map-section-mat {
+        padding: 30px 0 20px 0;
     }
+
+    .map-container-wrap {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    /* Penyesuaian Kunci Gambar Peta di HP */
+    .map-container-wrap img,
+    .map-container-wrap iframe,
+    .peta-img {
+        max-height: 50vh !important; /* Gambar mengecil pas dengan layar ponsel */
+    }
+
     .bahaya-grid {
-        grid-template-columns: 1fr !important; /* Menjadi satu baris kebawah di HP */
-        gap: 20px !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
     }
 }
